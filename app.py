@@ -53,6 +53,28 @@ else:
     if uploaded_file is not None:
         import pandas as pd
         csv_data = pd.read_csv(uploaded_file)
+        
+        column_mapping = {
+            'radius_mean': 'mean radius', 'texture_mean': 'mean texture', 
+            'perimeter_mean': 'mean perimeter', 'area_mean': 'mean area', 
+            'smoothness_mean': 'mean smoothness', 'compactness_mean': 'mean compactness', 
+            'concavity_mean': 'mean concavity', 'concave points_mean': 'mean concave points', 
+            'symmetry_mean': 'mean symmetry', 'fractal_dimension_mean': 'mean fractal dimension',
+            'radius_se': 'radius error', 'texture_se': 'texture error', 
+            'perimeter_se': 'perimeter error', 'area_se': 'area error', 
+            'smoothness_se': 'smoothness error', 'compactness_se': 'compactness error', 
+            'concavity_se': 'concavity error', 'concave points_se': 'concave points error', 
+            'symmetry_se': 'symmetry error', 'fractal_dimension_se': 'fractal dimension error',
+            'radius_worst': 'worst radius', 'texture_worst': 'worst texture', 
+            'perimeter_worst': 'worst perimeter', 'area_worst': 'worst area', 
+            'smoothness_worst': 'worst smoothness', 'compactness_worst': 'worst compactness', 
+            'concavity_worst': 'worst concavity', 'concave points_worst': 'worst concave points', 
+            'symmetry_worst': 'worst symmetry', 'fractal_dimension_worst': 'worst fractal dimension'
+        }
+        
+        # Rename columns if they match the Kaggle naming convention
+        csv_data = csv_data.rename(columns=column_mapping)
+
         st.write("Preview of uploaded data:")
         st.dataframe(csv_data.head())
 
