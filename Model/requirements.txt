@@ -1,6 +1,0 @@
-streamlit
-tensorflow-cpu
-scikit-learn
-joblib
-numpy
-pandas
