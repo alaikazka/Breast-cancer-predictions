@@ -1,6 +1,4 @@
 import sys
-!{sys.executable} -m pip install streamlit
-
 from tensorflow.keras.models import load_model
 import joblib
 import streamlit as st
