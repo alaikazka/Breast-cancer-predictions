@@ -5,8 +5,8 @@ import pandas as pd
 import numpy as np
 
 # 1. Load Model dan Scaler
-model = tf.keras.models.load_model("breast_cancer_pred_model.keras")
-scaler = joblib.load("scaler.pkl")
+model = tf.keras.models.load_model("Model/breast_cancer_pred_model.keras")
+scaler = joblib.load("Model/scaler.pkl")
 
 # 2. Application Title
 st.title("Breast Cancer Prediction App")
