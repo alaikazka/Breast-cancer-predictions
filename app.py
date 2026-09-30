@@ -1,9 +1,3 @@
-import sys
-from tensorflow.keras.models import load_model
-import joblib
-import streamlit as st
-import numpy as np
-
 # 1. Load Model dan Scaler
 model = load_model("breast_cancer_pred_model.keras")
 scaler = joblib.load("scaler.pkl")
