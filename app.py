@@ -1,5 +1,5 @@
 # 1. Load Model dan Scaler
-model = load_model("breast_cancer_pred_model.keras")
+model = tf.keras.models.load_model("breast_cancer_pred_model.keras")
 scaler = joblib.load("scaler.pkl")
 
 # 2. Application Title
